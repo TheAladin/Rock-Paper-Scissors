@@ -56,12 +56,11 @@ function game() {
         else {
             score[1]++;
         }
-        if (score[0] > score[1]) {
-            console.log("You Win the game!")
-        }
-        else {
-            console.log("You Lose the game!")
-        }
-
+    }
+    if (score[0] > score[1]) {
+        console.log("You Win the game!")
+    }
+    else {
+        console.log("You Lose the game!")
     }
 }
