@@ -45,10 +45,9 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let score = [0, 0];
     for(let i = 0; i < 5; i++){
-        let result = 
-        playRound(
-            prompt("Please choose your next play: "),
-             getComputerChoice());
+        let playerChoice = prompt("Please choose your next play: ");
+        let computerChoice = getComputerChoice();
+        let result = playRound(playerChoice, computerChoice);
         console.log(result);
         if (result[4] == "W") {
             score[0]++;
