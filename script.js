@@ -2,7 +2,7 @@ function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
     switch(choice) {
         case 0:
-            return "Rocks";
+            return "Rock";
             break;
         case 1:
             return "Paper";
@@ -44,10 +44,11 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     let score = [0, 0];
+    let result;
     for(let i = 0; i < 5; i++){
         let playerChoice = prompt("Please choose your next play: ");
         let computerChoice = getComputerChoice();
-        let result = playRound(playerChoice, computerChoice);
+        result = playRound(playerChoice, computerChoice);
         console.log(result);
         if (result[4] == "W") {
             score[0]++;
