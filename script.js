@@ -41,3 +41,27 @@ function playRound(playerSelection, computerSelection) {
     }
     
 }
+
+function game() {
+    let score = [0, 0];
+    for(let i = 0; i < 5; i++){
+        let result = 
+        playRound(
+            prompt("Please choose your next play: "),
+             getComputerChoice());
+        console.log(result);
+        if (result[4] == "W") {
+            score[0]++;
+        }
+        else {
+            score[1]++;
+        }
+        if (score[0] > score[1]) {
+            console.log("You Win the game!")
+        }
+        else {
+            console.log("You Lose the game!")
+        }
+
+    }
+}
